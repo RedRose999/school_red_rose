@@ -55,6 +55,28 @@ model tblComp {
   createdAt    DateTime          @default(now())
   updatedAt    DateTime          @updatedAt
 }
+model tblContact {
+  conId       Int               @id @default(autoincrement())
+  name     String    @db.VarChar(100)
+  email     String    @db.VarChar(100)
+  phone         String?       @db.VarChar(10)
+  subject        String?           @db.VarChar(255)
+  desc         String?           @db.VarChar(255)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+ 
+}
+model tblVacancy {
+  vacId       Int               @id @default(autoincrement())
+  title        String?           @db.VarChar(255)
+  position         String?           @db.VarChar(255)
+  qualification         String?           @db.VarChar(255)
+  jobDesc         String?           @db.VarChar(255)
+  salary         String?           @db.VarChar(255)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+ 
+}
 
 model tblAlbum {
   albumId    Int      @id @default(autoincrement())
